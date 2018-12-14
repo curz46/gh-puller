@@ -68,7 +68,9 @@ public class Puller {
                             System.out.println("Executing commands for hook: " + hook.name);
                             final Runtime runtime = Runtime.getRuntime();
                             for (final String command : hook.commands) {
-                                runtime.exec(command);
+                                runtime
+                                    .exec(command)
+                                    .waitFor();
                             }
                             System.out.println("Execution finished for hook: " + hook.name);
                         }

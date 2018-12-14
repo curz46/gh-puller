@@ -1,0 +1,19 @@
+{
+  "host": "0.0.0.0",
+  "port": 8080,
+  "hooks": [
+    {
+      "name": "example",
+      "key": "some_key",
+      "branches": ["some_branch"],
+      "commands": [
+        "echo example command",
+        "echo another example"
+      ]
+    },
+    {
+      "name": "example2",
+      "key": "another_key"
+    }
+  ]
+}
